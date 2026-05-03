@@ -379,12 +379,12 @@
             <div class="risk-grid">
               <div class="group-card high">
                 <h3>Hlavní rizikové faktory</h3>
-                <p><strong>Přítomnost alespoň jednoho hlavního faktoru = EKG silně indikováno.</strong></p>
+                <p><strong>Přítomnost alespoň jednoho hlavního faktoru = EKG jednoznačně doporučeno.</strong></p>
                 <div id="majorRisks"></div>
               </div>
               <div class="group-card moderate">
-                <h3>Aditivní rizikové faktory</h3>
-                <p><strong>Dva a více faktorů = EKG doporučeno.</strong></p>
+                <h3>Podpůrné rizikové faktory</h3>
+                <p><strong>Dva a více faktorů = EKG lze zvážit.</strong></p>
                 <div id="additiveRisks"></div>
               </div>
             </div>
@@ -404,9 +404,9 @@
               <div class="mini-card">
                 <h4>CYP3A4 inhibitory</h4>
                 <ul>
-                  <li>klarithromycin</li>
-                  <li>erythromycin</li>
-                  <li>azolová antimykotika</li>
+                  <li>klarithromycin, erytromycin</li>
+                  <li>flukonazol, ketokonazol, itrakonazol, vorikonazol</li>
+                  <li>verapamil, diltiazem</li>
                   <li>proteázové inhibitory</li>
                   <li>grapefruitová šťáva</li>
                 </ul>
@@ -417,6 +417,7 @@
                   <li>paroxetin</li>
                   <li>fluoxetin</li>
                   <li>bupropion</li>
+                   <li>duloxetin</li>
                 </ul>
               </div>
               <div class="mini-card">
@@ -428,7 +429,7 @@
               </div>
             </div>
             <div class="info-box">
-              Seznam je orientační a není vyčerpávající. U konkrétního pacienta je vhodné ověřit aktuální SPC a lékové interakce v používané databázi.
+              Seznam je orientační (tzn. není vyčerpávající). Vždy je vhodné ověřit aktuální SPC a možné interakce např. v používané databázi.
             </div>
           </div>
         </details>
@@ -439,16 +440,16 @@
             <table>
               <thead><tr><th>Situace</th><th>Doporučení</th></tr></thead>
               <tbody>
-                <tr><td>Zahájení nebo změna dávky QT-prolongujícího léčiva</td><td>Opakovat EKG po dosažení steady state, přibližně po 4–5 eliminačních poločasech.</td></tr>
-                <tr><td>Přidání dalšího QT-prolongujícího léčiva</td><td>EKG po dosažení steady state nové kombinace.</td></tr>
-                <tr><td>Přidání silného inhibitoru CYP</td><td>EKG po dosažení nové rovnováhy expozice.</td></tr>
+                <tr><td>Změna dávky QTc-prolongujícího léčiva</td><td>Opakovat EKG po dosažení steady state, přibližně po 4–5 eliminačních poločasech.</td></tr>
+                <tr><td>Přidání dalšího QTc-prolongujícího léčiva</td><td>EKG po dosažení steady state.</td></tr>
+                <tr><td>Přidání silného inhibitoru CYP</td><td>EKG po dosažení steady.</td></tr>
                 <tr><td>Významná elektrolytová abnormalita</td><td>EKG po korekci K, Mg, Ca.</td></tr>
                 <tr><td>Synkopa, presynkopa, palpitace</td><td>EKG okamžitě.</td></tr>
                 <tr><td>Vysoké kumulativní riziko</td><td>Individuálně častější monitorace.</td></tr>
               </tbody>
             </table>
             <div class="info-box">
-              Dosažení steady state odpovídá přibližně 4–5 eliminačním poločasům léčiva. U léčiv s dlouhým poločasem nebo aktivními metabolity může být interval delší.
+              Dosažení steady state odpovídá přibližně 4–5 eliminačním poločasům léčiva. U léčiv s dlouhým poločasem (fluoxetin, parciální agonisté - aripiprazol, brexpiprazol, kariprazin) nebo s aktivními metabolity může být interval delší.
             </div>
           </div>
         </details>
@@ -462,7 +463,7 @@
                 <tr><td>&lt;450 ms u mužů / &lt;460 ms u žen</td><td>Obvykle normální rozmezí.</td></tr>
                 <tr><td>450–470 ms u mužů / 460–480 ms u žen</td><td>Hraniční QTc.</td></tr>
                 <tr><td>&gt;470 ms u mužů / &gt;480 ms u žen</td><td>Prodloužené QTc.</td></tr>
-                <tr><td>≥500 ms</td><td>Vysoké riziko torsades de pointes.</td></tr>
+                <tr><td>≥500 ms</td><td>Vysoké riziko vzniku arytmie torsades de pointes.</td></tr>
               </tbody>
             </table>
 
@@ -470,8 +471,8 @@
               <div class="management-card red">
                 <h3>QTc ≥500 ms</h3>
                 <ul>
-                  <li>vysadit nebo snížit dávku rizikového léčiva / léčiv</li>
-                  <li>odstranit QT-prolongující kombinace</li>
+                  <li>vysadit nebo výrazně snížit dávku rizikového léčiva/léčiv / léčiv</li>
+                  <li>odstranit rizikovou kombinaci léčiv prodlužující QTc</li>
                   <li>zkontrolovat a korigovat K, Mg, Ca</li>
                   <li>zhodnotit lékové interakce</li>
                   <li>zvážit switch na léčivo s nižším QTc rizikem</li>
@@ -482,10 +483,9 @@
               <div class="management-card yellow">
                 <h3>QTc prodloužené, ale &lt;500 ms</h3>
                 <ul>
-                  <li>zopakovat EKG</li>
                   <li>zkontrolovat K, Mg, Ca</li>
-                  <li>upravit reverzibilní rizika</li>
                   <li>zvážit snížení dávky nebo změnu léčiva</li>
+                  <li>zopakovat EKG</li>
                 </ul>
               </div>
               <div class="management-card green">
@@ -502,7 +502,7 @@
         <details>
           <summary>6. Zdroje</summary>
           <div class="section-content references">
-            <p>Algoritmus je založen na evidence-informované syntéze níže uvedených zdrojů. Nejde o validovaný skórovací systém.</p>
+            <p>Algoritmus je založen na syntéze níže uvedených zdrojů. Nejedná se o validovaný skórovací systém.</p>
             <ol>
               <li>Huhn M, Nikolakopoulou A, Schneider-Thoma J, Krause M, Samara M, Peter N, et al. Comparative efficacy and tolerability of 32 oral antipsychotics for the acute treatment of adults with multi-episode schizophrenia: a systematic review and network meta-analysis. <em>Lancet</em>. 2019;394(10202):939–951. doi:10.1016/S0140-6736(19)31135-3.</li>
               <li>Chung AK, Chua SE. Effects on prolongation of Bazett’s corrected QT interval of seven second-generation antipsychotics in the treatment of schizophrenia: a meta-analysis. <em>J Psychopharmacol</em>. 2011;25(5):646–653. doi:10.1177/0269881110376685.</li>
@@ -522,7 +522,7 @@
           <h2>Výsledek algoritmu</h2>
         </div>
         <div class="result-body">
-          <div id="resultBadge" class="risk-badge risk-low">🟢 EKG rutinně není nutné</div>
+          <div id="resultBadge" class="risk-badge risk-low">🟢 EKG není nutné</div>
           <div id="resultText" class="result-message">
             EKG není rutinně vyžadováno. Zvažte individuálně při změně klinického stavu, navýšení dávky nebo přidání dalšího QT-prolongujícího léčiva.
           </div>
@@ -540,7 +540,7 @@
   <script>
     const groups = {
       lowMeds: ["aripiprazol", "brexpiprazol", "kariprazin", "lurasidon"],
-      moderateMeds: ["flufenazin", "haloperidol (perorální)", "klozapin", "melperon", "olanzapin", "paliperidon", "quetiapin", "risperidon", "sulpirid"],
+      moderateMeds: ["flufenazin", "haloperidol (perorální)", "klozapin", "melperon", "olanzapin", "paliperidon", "kvetiapin", "risperidon", "sulpirid"],
       highMeds: ["amisulprid", "chlorpromazin", "haloperidol (intravenózní)", "levomepromazin", "sertindol", "ziprasidon"],
       otherMeds: ["citalopram", "escitalopram", "venlafaxin", "trazodon", "lithium", "hydroxyzin", "methadon", "tricyklická antidepresiva"],
       majorRisks: [
@@ -556,9 +556,9 @@
         "hypokalcemie",
         "dehydratace, zvracení nebo průjem",
         "akutní somatické zhoršení / sepse / delirium",
-        "předávkování psychofarmaky",
-        "současné jiné QT-prolongující léčivo",
-        "významná léková interakce zvyšující expozici psychofarmaka"
+        "intoxikace psychofarmaky (i iatrogenní)",
+        "současné podávání somatické medikace prodlužující QTc interval",
+        "významná léková interakce zvyšující expozici rizikového psychofarmaka"
       ],
       additiveRisks: [
         "věk ≥65 let",
@@ -613,16 +613,16 @@
       }
 
       let level = "low";
-      let title = "🟢 EKG rutinně není nutné";
-      let text = "EKG není rutinně vyžadováno. Zvažte individuálně při změně klinického stavu, navýšení dávky nebo přidání dalšího QT-prolongujícího léčiva.";
+      let title = "🟢 EKG není nutné";
+      let text = "EKG není rutinně vyžadováno. Zvažte individuálně při změně klinického stavu, navýšení dávky nebo přidání dalšího léčiva prodlužující QTc";
 
       if (medicationRisk === "vysoké" || major >= 1) {
         level = "high";
-        title = "🔴 EKG silně indikováno";
-        text = "EKG je silně indikováno před zahájením léčby nebo co nejdříve. Současně zkontrolujte a korigujte K, Mg, Ca, přehodnoťte kombinace QT-prolongujících léčiv a zvažte léčivo s nižším QTc rizikem.";
+        title = "🔴 EKG jednoznačně doporučeno";
+        text = "EKG je jednoznačně doporučeno před zahájením léčby nebo co nejdříve. Současně zkontrolujte a případně korigujte K, Mg, Ca (do horní poloviny referenčího rozmezí), přehodnoťte kombinace rizikových léčiv a zvažte léčivo s nižším QTc rizikem.";
       } else if (medicationRisk === "střední" || additive >= 2) {
         level = "moderate";
-        title = "🟡 EKG doporučeno";
+        title = "🟡 EKG lze zvažovat";
         text = "Doporučujeme provést baseline EKG před zahájením léčby nebo při nejbližší možné kontrole. Zkontrolujte K, Mg a Ca a zvažte kontrolní EKG po dosažení steady state.";
       }
 
@@ -636,7 +636,7 @@
         Riziko medikace: <strong>${medicationRisk}</strong><br>
         QT-relevantní léčiva celkem: <strong>${totalQT}</strong><br>
         Hlavní rizikové faktory: <strong>${major}</strong><br>
-        Aditivní rizikové faktory: <strong>${additive}</strong>
+        Podpůrné rizikové faktory: <strong>${additive}</strong>
       `;
     }
 
