@@ -1,1 +1,237 @@
+Create a single-file, GitHub Pages–ready HTML web application in Czech.
 
+Title:
+Algoritmus indikace EKG u pacientů léčených psychofarmaky
+
+Purpose:
+Create an interactive clinical decision-support tool that helps clinicians decide when ECG monitoring is indicated in psychiatric patients treated with QTc-prolonging psychotropic medications. The tool must clearly state that it is a supportive tool only and does not replace clinical judgement.
+
+Design:
+- Professional academic clinical style
+- Soft pastel colour palette: light blue, light green, pale teal, soft grey
+- Mobile-friendly responsive layout
+- Clean cards with rounded corners
+- Collapsible accordion sections (“kaskády”)
+- Clear result box with green/yellow/red risk categories
+- No external dependencies; pure HTML, CSS, and JavaScript
+- Suitable for GitHub Pages
+
+Structure:
+
+1. Header
+Title:
+Algoritmus indikace EKG u pacientů léčených psychofarmaky
+
+Intro text:
+Tento algoritmus slouží jako podpůrný klinický nástroj (clinical decision support) pro rozhodování, kdy indikovat EKG u pacientů léčených psychofarmaky s potenciálem prodloužit QTc interval. Vychází ze syntézy dostupných důkazů, včetně randomizovaných klinických studií, metaanalýz, farmakovigilančních dat, regulačních dokumentů EMA/FDA/SPC a odborných doporučení včetně CredibleMeds®.
+
+Important disclaimer:
+Tento nástroj nenahrazuje klinický úsudek. Rozhodnutí o provedení EKG musí vždy vycházet z individuálního posouzení pacienta.
+
+2. Accordion section: Krok 1 – Výběr léčiv
+
+Show checkbox groups.
+
+Antipsychotika – minimální / nízké riziko:
+- aripiprazol
+- brexpiprazol
+- kariprazin
+- lurasidon
+
+Antipsychotika – střední riziko:
+- flufenazin
+- haloperidol (perorální)
+- klozapin
+- melperon
+- olanzapin
+- paliperidon
+- quetiapin
+- risperidon
+- sulpirid
+
+Antipsychotika – vysoké riziko:
+- amisulprid
+- chlorpromazin
+- haloperidol (intravenózní)
+- levomepromazin
+- sertindol
+- ziprasidon
+
+Další QTc-prolongující psychofarmaka:
+- citalopram
+- escitalopram
+- venlafaxin
+- trazodon
+- lithium
+- hydroxyzin
+- methadon
+- tricyklická antidepresiva
+
+Logic for medication risk:
+- Low medication risk: only low-risk antipsychotics selected and no other QTc-prolonging drugs selected.
+- Moderate medication risk: one or two moderate-risk antipsychotics or one additional QTc-prolonging psychotropic without high-risk antipsychotic.
+- High medication risk:
+  - any high-risk antipsychotic selected
+  - or haloperidol intravenous selected
+  - or high-risk antipsychotic plus any moderate-risk antipsychotic
+  - or three or more QTc-relevant medicines selected in total
+  - or two or more moderate-risk antipsychotics plus at least one additional QTc-prolonging psychotropic
+
+Add note:
+Vyšší dávka, rychlá titrace nebo léková interakce zvyšující expozici může posunout pacienta do vyšší rizikové kategorie.
+
+3. Accordion section: Krok 2 – Rizikové faktory pacienta
+
+Hlavní rizikové faktory:
+- známé prodloužení QTc v anamnéze
+- QTc ≥500 ms v anamnéze
+- kongenitální long QT syndrom nebo náhlá srdeční smrt v rodině
+- synkopa, presynkopa, palpitace nebo nevysvětlitelné závratě
+- srdeční selhání
+- ischemická choroba srdeční / stav po infarktu myokardu
+- arytmie nebo významná bradykardie
+- hypokalemie
+- hypomagnezemie
+- hypokalcemie
+- dehydratace, zvracení nebo průjem
+- akutní somatické zhoršení / sepse / delirium
+- předávkování psychofarmaky
+- současné jiné QT-prolongující léčivo
+- významná léková interakce zvyšující expozici psychofarmaka
+
+Aditivní rizikové faktory:
+- věk ≥65 let
+- ženské pohlaví
+- diabetes mellitus
+- obezita / metabolický syndrom
+- renální insuficience
+- jaterní insuficience
+- léčba diuretiky
+- polyfarmacie
+- vyšší dávka psychofarmaka
+- rychlá titrace dávky
+
+Important:
+Do not include borderline QTc as an additive factor. QTc value belongs only to the interpretation section after ECG has been performed.
+
+4. Accordion subsection: Lékové interakce – praktické příklady
+
+Display informational text:
+Inhibice metabolismu může vést ke zvýšení plazmatické koncentrace psychofarmaka a tím sekundárně zvýšit riziko prodloužení QTc.
+
+Examples:
+CYP3A4 inhibitors:
+- klarithromycin
+- erythromycin
+- azolová antimykotika
+- proteázové inhibitory
+- grapefruitová šťáva
+
+CYP2D6 inhibitors:
+- paroxetin
+- fluoxetin
+- bupropion
+
+CYP1A2 inhibitors:
+- fluvoxamin
+- ciprofloxacin
+
+5. Result section – always visible
+
+Automatically calculate and display one of three recommendations:
+
+Green result:
+EKG rutinně není nutné
+Criteria:
+- low medication risk
+- no major risk factor
+- 0–1 additive risk factor
+
+Text:
+EKG není rutinně vyžadováno. Zvažte individuálně při změně klinického stavu, navýšení dávky nebo přidání dalšího QT-prolongujícího léčiva.
+
+Yellow result:
+EKG doporučeno
+Criteria:
+- moderate medication risk
+- or ≥2 additive risk factors
+- or planned dose escalation / rapid titration
+
+Text:
+Doporučujeme provést baseline EKG před zahájením léčby nebo při nejbližší možné kontrole. Zkontrolujte K, Mg a Ca.
+
+Red result:
+EKG silně indikováno
+Criteria:
+- high medication risk
+- or ≥1 major risk factor
+
+Text:
+EKG je silně indikováno před zahájením léčby nebo co nejdříve. Současně zkontrolujte a korigujte K, Mg, Ca, přehodnoťte kombinace QT-prolongujících léčiv a zvažte léčivo s nižším QTc rizikem.
+
+6. Accordion section: Kontrolní EKG – kdy zopakovat
+
+Table:
+- zahájení nebo změna dávky QT-prolongujícího léčiva: opakovat EKG po dosažení steady state, přibližně po 4–5 eliminačních poločasech
+- přidání dalšího QT-prolongujícího léčiva: EKG po dosažení steady state nové kombinace
+- přidání silného inhibitoru CYP: EKG po dosažení nové rovnováhy
+- významná elektrolytová abnormalita: EKG po korekci
+- synkopa, presynkopa, palpitace: okamžitě
+- vysoké kumulativní riziko: individuálně častější monitorace
+
+Note:
+Dosažení steady state odpovídá přibližně 4–5 eliminačním poločasům léčiva. U léčiv s dlouhým poločasem nebo aktivními metabolity může být interval delší.
+
+7. Accordion section: Interpretace výsledku EKG
+
+Table:
+- QTc <450 ms u mužů / <460 ms u žen: normální
+- QTc 450–470 ms u mužů / 460–480 ms u žen: hraniční
+- QTc >470 ms u mužů / >480 ms u žen: prodloužené
+- QTc ≥500 ms: vysoké riziko torsades de pointes
+
+Management:
+QTc ≥500 ms:
+- vysadit nebo snížit dávku rizikového léčiva / léčiv
+- odstranit QT-prolongující kombinace
+- zkontrolovat a korigovat K, Mg, Ca
+- zhodnotit lékové interakce
+- zvážit switch na léčivo s nižším QTc rizikem
+- při synkopě, presynkopě, palpitacích nebo arytmii urgentní vyšetření / monitorace
+- zvážit kardiologickou konzultaci
+
+QTc prodloužené, ale <500 ms:
+- zopakovat EKG
+- zkontrolovat K, Mg, Ca
+- upravit reverzibilní rizika
+- zvážit snížení dávky nebo změnu léčiva
+
+8. Accordion section: Zdroje
+
+Include Vancouver-style references:
+
+Huhn M, Nikolakopoulou A, Schneider-Thoma J, Krause M, Samara M, Peter N, et al. Comparative efficacy and tolerability of 32 oral antipsychotics for the acute treatment of adults with multi-episode schizophrenia: a systematic review and network meta-analysis. Lancet. 2019;394(10202):939–951. doi:10.1016/S0140-6736(19)31135-3.
+
+Chung AK, Chua SE. Effects on prolongation of Bazett’s corrected QT interval of seven second-generation antipsychotics in the treatment of schizophrenia: a meta-analysis. J Psychopharmacol. 2011;25(5):646–653. doi:10.1177/0269881110376685.
+
+Aronow WS, Shamliyan TA. Effects of atypical antipsychotic drugs on QT interval in patients with mental disorders. Ann Transl Med. 2018;6(8):147. doi:10.21037/atm.2018.04.12.
+
+Bordet C, Garcia P, Salvo F, Touafchia A, Galinier M, Sommet A, et al. Antipsychotics and risk of QT prolongation: a pharmacovigilance study. Psychopharmacology (Berl). 2023;240:199–202. doi:10.1007/s00213-022-06338-0.
+
+Lambiase PD, de Bono JP, Schilling RJ, Lowe M, Turley A, Slade A, et al. British Heart Rhythm Society clinical practice guidelines on the management of patients developing QT prolongation on antipsychotic medication. Arrhythm Electrophysiol Rev. 2019;8(3):161–165.
+
+Khatib R, Sabir FRN, Omari C, Pepper C, Tayebjee MH. Managing drug-induced QT prolongation in clinical practice. Postgrad Med J. 2021;97(1149):452–458.
+
+Zolezzi M, Cheung L. A literature-based algorithm for the assessment, management and monitoring of drug-induced QTc prolongation in the psychiatric population. Neuropsychiatr Dis Treat. 2019;15:105–114.
+
+CredibleMeds®. QTdrugs List. AZCERT, Inc. Available from: https://www.crediblemeds.org
+
+Footer:
+Created as an evidence-informed clinical support tool. Not intended to replace local guidelines, product information, cardiology consultation, or individual clinical judgement.
+
+Functionality:
+- Checkbox selection updates result instantly
+- Include “Resetovat formulář” button
+- Result card changes colour according to recommendation
+- Accordions open/close smoothly
+- Fully responsive on mobile
