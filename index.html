@@ -346,7 +346,7 @@
         <details open>
           <summary>1. Krok – Výběr léčiv</summary>
           <div class="section-content">
-            <p>Zaškrtněte všechna relevantní psychofarmaka. Klasifikace antipsychotik vychází ze syntézy EBM zdrojů a slouží k orientačnímu určení lékového rizika. Jednotlivé zdroje se mohou zařazením léčiv do rizikových skupin lišit.</p>
+            <p>Zaškrtněte všechna relevantní psychofarmaka. Klasifikace rizika psychofarmak vychází ze syntézy EBM zdrojů a slouží k orientačnímu určení lékového rizika. Jednotlivé zdroje se mohou zařazením léčiv do rizikových skupin lišit.</p>
 
             <div class="medicine-grid">
               <div class="group-card low">
@@ -362,7 +362,7 @@
                 <div id="highMeds"></div>
               </div>
               <div class="group-card other">
-                <h3>Další léčiva potenciálně prodlužující QTc</h3>
+                <h3>Další léčiva s potenciálem prodloužení QTc interval</h3>
                 <div id="otherMeds"></div>
               </div>
             </div>
@@ -379,12 +379,12 @@
             <div class="risk-grid">
               <div class="group-card high">
                 <h3>Hlavní rizikové faktory</h3>
-                <p><strong>Přítomnost alespoň jednoho hlavního faktoru = EKG jednoznačně doporučeno.</strong></p>
+                <p><strong>Přítomnost alespoň jednoho hlavního rizikového faktoru = EKG jednoznačně doporučeno.</strong></p>
                 <div id="majorRisks"></div>
               </div>
               <div class="group-card moderate">
                 <h3>Podpůrné rizikové faktory</h3>
-                <p><strong>Dva a více faktorů = EKG lze zvážit.</strong></p>
+                <p><strong>Dva a více podpůrných rizikových faktorů = EKG lze zvážit.</strong></p>
                 <div id="additiveRisks"></div>
               </div>
             </div>
@@ -398,7 +398,7 @@
           <summary>3. Lékové interakce – praktické příklady</summary>
           <div class="section-content">
             <p>
-              Inhibice metabolismu může vést ke zvýšení plazmatické koncentrace psychofarmaka a tím sekundárně zvýšit riziko prodloužení QTc. Riziko je klinicky významné zejména u kombinace QT-prolongujícího léčiva, vyšší dávky a dalšího pacientského rizika.
+              Inhibice metabolismu psychofarmak může vést ke zvýšení plazmatické koncentrace psychofarmaka, a tím sekundárně zvýšit riziko prodloužení QTc. Riziko je klinicky významné, zejména u kombinace rizikových léčiv nebo dalších rizikových faktorů pacienta.
             </p>
             <div class="interaction-columns">
               <div class="mini-card">
@@ -429,7 +429,7 @@
               </div>
             </div>
             <div class="info-box">
-              Seznam je orientační (tzn. není vyčerpávající). Vždy je vhodné ověřit aktuální SPC a možné interakce např. v používané databázi.
+              Seznam je orientační (tzn. není vyčerpávající). Vždy je vhodné ověřit aktuální SPC a možné interakce např. v dostupné interakčním databázi.
             </div>
           </div>
         </details>
@@ -440,16 +440,16 @@
             <table>
               <thead><tr><th>Situace</th><th>Doporučení</th></tr></thead>
               <tbody>
-                <tr><td>Změna dávky QTc-prolongujícího léčiva</td><td>Opakovat EKG po dosažení steady state, přibližně po 4–5 eliminačních poločasech.</td></tr>
-                <tr><td>Přidání dalšího QTc-prolongujícího léčiva</td><td>EKG po dosažení steady state.</td></tr>
-                <tr><td>Přidání silného inhibitoru CYP</td><td>EKG po dosažení steady.</td></tr>
-                <tr><td>Významná elektrolytová abnormalita</td><td>EKG po korekci K, Mg, Ca.</td></tr>
-                <tr><td>Synkopa, presynkopa, palpitace</td><td>EKG okamžitě.</td></tr>
-                <tr><td>Vysoké kumulativní riziko</td><td>Individuálně častější monitorace.</td></tr>
+                <tr><td>Změna dávky rizikového léčiva</td><td>Opakovat EKG po dosažení ustálené koncentrace (Css = steady state), přibližně po 4–5 eliminačních poločasech.</td></tr>
+                <tr><td>Přidání dalšího rizikového léčiva</td><td>EKG po dosažení ustálené koncentrace.</td></tr>
+                <tr><td>Přidání silného inhibitoru ovlivňujícího metabolismus rizikového léčiva</td><td>EKG po ustálené koncentrace.</td></tr>
+                <tr><td>Významná elektrolytová abnormalita (K, Mg, Ca)</td><td>EKG po korekci K, Mg, Ca.</td></tr>
+                <tr><td>Synkopa, presynkopa, palpitace aj. symptomy arytmie </td><td>EKG okamžitě.</td></tr>
+                <tr><td>Vysoké kumulativní riziko</td><td>Individuálně častější frekvence monitorace.</td></tr>
               </tbody>
             </table>
             <div class="info-box">
-              Dosažení steady state odpovídá přibližně 4–5 eliminačním poločasům léčiva. U léčiv s dlouhým poločasem nebo s aktivními metabolity (fluoxetin, parciální agonisté - aripiprazol, brexpiprazol, kariprazin) může být interval delší.
+              Dosažení ustáleného stavu odpovídá přibližně 4–5 eliminačním poločasům léčiva. U léčiv s dlouhým poločasem nebo s aktivními metabolity (fluoxetin, parciální agonisté - aripiprazol, brexpiprazol, kariprazin) může být interval delší.
             </div>
           </div>
         </details>
@@ -471,12 +471,11 @@
               <div class="management-card red">
                 <h3>QTc ≥500 ms</h3>
                 <ul>
-                  <li>vysadit nebo výrazně snížit dávku rizikového léčiva/léčiv / léčiv</li>
-                  <li>odstranit rizikovou kombinaci léčiv prodlužující QTc</li>
+                  <li>vysadit nebo výrazně snížit dávku rizikového léčiva/léčiv</li>
+                  <li>redukovat polyfarmacii a kombinace rizikových léčiv</li>
                   <li>zkontrolovat a korigovat K, Mg, Ca</li>
                   <li>zhodnotit lékové interakce</li>
                   <li>zvážit switch na léčivo s nižším QTc rizikem</li>
-                  <li>při symptomech urgentní vyšetření / monitorace</li>
                   <li>zvážit kardiologickou konzultaci</li>
                 </ul>
               </div>
@@ -484,8 +483,8 @@
                 <h3>QTc prodloužené, ale &lt;500 ms</h3>
                 <ul>
                   <li>zkontrolovat K, Mg, Ca</li>
-                  <li>zvážit snížení dávky nebo změnu léčiva</li>
-                  <li>zopakovat EKG</li>
+                  <li>zvážit snížení dávky nebo změnu na méně rizikové léčivo</li>
+                  <li>zopakovat EKG po intervenci</li>
                 </ul>
               </div>
               <div class="management-card green">
@@ -511,6 +510,7 @@
               <li>Lambiase PD, de Bono JP, Schilling RJ, Lowe M, Turley A, Slade A, et al. British Heart Rhythm Society clinical practice guidelines on the management of patients developing QT prolongation on antipsychotic medication. <em>Arrhythm Electrophysiol Rev</em>. 2019;8(3):161–165.</li>
               <li>Khatib R, Sabir FRN, Omari C, Pepper C, Tayebjee MH. Managing drug-induced QT prolongation in clinical practice. <em>Postgrad Med J</em>. 2021;97(1149):452–458.</li>
               <li>Zolezzi M, Cheung L. A literature-based algorithm for the assessment, management and monitoring of drug-induced QTc prolongation in the psychiatric population. <em>Neuropsychiatr Dis Treat</em>. 2019;15:105–114.</li>
+              <li>Berul CI. Acquired long QT syndrome: Pathophysiology, epidemiology, and causes. In: UpToDate [Internet]. Waltham (MA): UpToDate Inc.; 2026 [cited 2026 May 5]. Available from: https://www.uptodate.com<li>
               <li>CredibleMeds®. QTdrugs List. AZCERT, Inc. Available from: https://www.crediblemeds.org</li>
             </ol>
           </div>
