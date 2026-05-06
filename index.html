@@ -109,34 +109,48 @@
 
     .result-body { padding: 20px; }
 
-    .risk-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 13px;
-      border-radius: 999px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
+  .risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
 
     .risk-low { background: var(--green); color: var(--green-dark); }
     .risk-moderate { background: var(--yellow); color: var(--yellow-dark); }
     .risk-high { background: var(--red); color: var(--red-dark); }
 
-    .result-message {
-      font-size: 1rem;
-      margin: 8px 0 12px;
-    }
+  .result-message {
+  font-size: 0.98rem;
+  margin: 6px 0 10px;
+  color: #2f3e46;
+}
+.risk-low + .result-message { 
+  border-left: 4px solid #2f7d4f; 
+  padding-left: 10px; 
+}
 
-    .summary-list {
-      background: #f8fbfc;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px 14px;
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+.risk-moderate + .result-message { 
+  border-left: 4px solid #9a6a00; 
+  padding-left: 10px; 
+}
+
+.risk-high + .result-message { 
+  border-left: 4px solid #b42318; 
+  padding-left: 10px; 
+}
+ .summary-list {
+  background: #f4f7f9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-top: 12px;
+  font-size: 0.92rem;
+}
 
     .reset-btn {
       width: 100%;
@@ -645,13 +659,13 @@ table th:first-child {
       badge.textContent = title;
       document.getElementById("resultText").textContent = text;
 
-      document.getElementById("summaryBox").innerHTML = `
-        <strong>Souhrn:</strong><br>
-        Riziko medikace: <strong>${medicationRisk}</strong><br>
-        QT-relevantní léčiva celkem: <strong>${totalQT}</strong><br>
-        Hlavní rizikové faktory: <strong>${major}</strong><br>
-        Podpůrné rizikové faktory: <strong>${additive}</strong>
-      `;
+    document.getElementById("summaryBox").innerHTML = `
+  <div style="font-weight:700; margin-bottom:6px;">Souhrn</div>
+  <div>Riziko medikace: <strong>${medicationRisk}</strong></div>
+  <div>QT léčiva: <strong>${totalQT}</strong></div>
+  <div>Hlavní RF: <strong>${major}</strong></div>
+  <div>Podpůrné RF: <strong>${additive}</strong></div>
+`;
     }
 
     function resetForm() {
