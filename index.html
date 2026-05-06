@@ -350,7 +350,7 @@
         <details open>
           <summary>1. Krok – Výběr léčiv</summary>
           <div class="section-content">
-            <p>Vyberte všechna relevantní psychofarmaka a jiná léčiva, která pacient užívá. Klasifikace rizika vychází ze syntézy EBM zdrojů a slouží k orientačnímu určení míry rizika. Zařazení léčiv do jednotlivých rizikových skupin se může v rámci různých zdrojů lišit.</p>
+            <p>Vyberte všechna relevantní psychofarmaka a jiná léčiva, která pacient užívá. Klasifikace rizika vychází ze syntézy EBM zdrojů a slouží k orientačnímu určení míry rizika. Zařazení léčiv do jednotlivých rizikových skupin se může v rámci různých zdrojů lišit. Za názvem léčiv je v závorce uvdenena hlavní metabolická cesta (konkrétním enzymy cytochromu P450 - CYP).</p>
 
             <div class="medicine-grid">
               <div class="group-card low">
@@ -527,9 +527,9 @@
 
   <script>
     const groups = {
-      lowMeds: ["aripiprazol", "brexpiprazol", "kariprazin", "lurasidon", "donepezil", "rivastigmin", ],
-      moderateMeds: ["flufenazin", "flupentixol", "haloperidol (perorální)", "klozapin", "melperon", "olanzapin", "paliperidon", "kvetiapin", "risperidon", "sulpirid", "venlafaxin", "trazodon", "lithium", "hydroxyzin", ],
-      highMeds: ["amisulprid", "chlorpromazin", "haloperidol (intravenózní)", "levomepromazin", "sertindol", "ziprasidon", "citalopram", "escitalopram", "tricyklická antidepresiva", "methadon"],
+      lowMeds: ["aripiprazol (CYP2D6,CYP3A4)", "brexpiprazol (CYP3A4, CYP2D6)", "kariprazin (CYP3A4, CYP2D6)", "lurasidon (CYP3A4)", "donepezil (CYP2D6, CYP3A4)", "rivastigmin (CYP minimální podíl)", ],
+      moderateMeds: ["flufenazin CYP2D6)", "flupentixol (CYP2D6)", "haloperidol -perorální (CYP2D6, CYP3A4)", "klozapin (CYP1A2, CYP2D6, CYP3A4)", "melperon (neznámá)", "olanzapin (CYP1A2, CYP2D6)", "paliperidon (60 % renální eliminace, minimlní podíl CYP3A4)", "kvetiapin (CYP3A4, minimálně CYP2A6)", "risperidon (CYP2D6, CYP3A4)", "sulpirid (nemetabolizuje se)", "venlafaxin (CYP2D6, CYP2C19)", "trazodon (CYP3A4, minimálně CYP2D6)", "lithium (nemetabolizuje se)", "hydroxyzin (CYP3A4)", ],
+      highMeds: ["amisulprid (nemetabolizuje se)", "chlorpromazin (CYP1A2, CYP2D6)", "haloperidol - intravenózní (CYP2A6, CYP3A4)", "levomepromazin (CYP3A4)", "sertindol (CYP2A6, CYP3A4)", "ziprasidon (CYP3A4)", "citalopram (CYP2C19)", "escitalopram (CYP2C19)", "tricyklická antidepresiva - amitriptylin, klomipramin aj. (CYP2C19, CYP2D6)", "methadon (CYP2B6, CYP3A4)"],
       otherMeds: ["makrolidová antibiotika -  azitromycin, klaritromycin, aj.", "fluorochinolová antibiotika - ciprofloxacin, levofloxacin aj.", "azolová antimykotika - vorikonazol, flukonazol aj.", "antiarytmika - amiodaron, propafenon, sotalol" ],
       majorRisks: [
         "známé prodloužení QTc v anamnéze na stejné medikaci",
