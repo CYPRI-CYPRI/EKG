@@ -642,16 +642,16 @@ table th:first-child {
 
       let level = "low";
       let title = "🟢 EKG není nutné";
-      let text = "EKG není rutinně vyžadováno. Zvažte individuálně při změně klinického stavu, navýšení dávky nebo přidání dalšího léčiva prodlužující QTc";
+      let text = "EKG není rutinně vyžadováno. Zvažte jej při změně klinického stavu, navýšení dávky, rychlé titraci nebo přidání dalšího rizikového léčiva.";
 
       if (medicationRisk === "vysoké" || major >= 1) {
         level = "high";
         title = "🔴 EKG jednoznačně doporučeno";
-        text = "EKG je jednoznačně doporučeno před zahájením léčby nebo co nejdříve. Současně zkontrolujte a případně korigujte K, Mg, Ca (do horní poloviny referenčího rozmezí), přehodnoťte kombinace rizikových léčiv a zvažte léčivo s nižším QTc rizikem.";
+        text = "EKG je jednoznačně doporučeno před zahájením léčby nebo co nejdříve. Současně zkontrolujte a případně korigujte K, Mg a Ca, přehodnoťte kombinace rizikových léčiv, lékové interakce a zvažte léčivo s nižším QTc rizikem.";
       } else if (medicationRisk === "střední" || additive >= 2) {
         level = "moderate";
-        title = "🟡 EKG lze zvažovat";
-        text = "Doporučujeme provést baseline EKG před zahájením léčby nebo při nejbližší možné kontrole. Zkontrolujte K, Mg a Ca a zvažte kontrolní EKG po dosažení steady state.";
+        title = "🟡 EKG lze zvažit";
+        text = "Zvažte provedení baseline EKG před zahájením léčby nebo při nejbližší možné kontrole, zejména při kumulaci rizikových faktorů, vyšší dávce, rychlé titraci nebo kombinaci více rizikových léčiv. Zkontrolujte hodnoty K, Mg a Ca.";
       }
 
       const badge = document.getElementById("resultBadge");
@@ -662,9 +662,9 @@ table th:first-child {
     document.getElementById("summaryBox").innerHTML = `
   <div style="font-weight:700; margin-bottom:6px;">Souhrn</div>
   <div>Riziko medikace: <strong>${medicationRisk}</strong></div>
-  <div>QT léčiva: <strong>${totalQT}</strong></div>
-  <div>Hlavní RF: <strong>${major}</strong></div>
-  <div>Podpůrné RF: <strong>${additive}</strong></div>
+  <div>Riziková léčiva celkem: <strong>${totalQT}</strong></div>
+  <div>Hlavní rizikové faktory: <strong>${major}</strong></div>
+  <div>Podpůrné rizikové faktory: <strong>${additive}</strong></div>
 `;
     }
 
