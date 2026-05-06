@@ -324,6 +324,10 @@
       text-align: center;
       font-size: 0.93rem;
     }
+ .result-inline {
+  position: static;
+  margin-bottom: 16px;
+}
   </style>
 </head>
 <body>
@@ -393,7 +397,19 @@
             </div>
           </div>
         </details>
-
+<section class="result-card result-inline" aria-live="polite">
+        <div class="result-header">
+          <h2>Výsledek algoritmu</h2>
+        </div>
+        <div class="result-body">
+          <div id="resultBadge" class="risk-badge risk-low">🟢 EKG není nutné</div>
+          <div id="resultText" class="result-message">
+            EKG není rutinně vyžadováno. Zvažte individuálně při změně klinického stavu, navýšení dávky nebo přidání dalšího QT-prolongujícího léčiva.
+          </div>
+          <div class="summary-list" id="summaryBox"></div>
+          <button class="reset-btn" id="resetBtn">Resetovat formulář</button>
+        </div>
+      </section>
         <details>
           <summary>3. Lékové interakce – praktické příklady</summary>
           <div class="section-content">
@@ -435,27 +451,7 @@
         </details>
 
         <details>
-          <summary>4. Kontrolní EKG – kdy zopakovat</summary>
-          <div class="section-content">
-            <table>
-              <thead><tr><th>Situace</th><th>Doporučení</th></tr></thead>
-              <tbody>
-                <tr><td>Změna dávky rizikového léčiva</td><td>Opakovat EKG po dosažení ustálené koncentrace (Css = steady state), přibližně po 4–5 eliminačních poločasech.</td></tr>
-                <tr><td>Přidání dalšího rizikového léčiva</td><td>EKG po dosažení ustálené koncentrace.</td></tr>
-                <tr><td>Přidání silného inhibitoru ovlivňujícího metabolismus rizikového léčiva</td><td>EKG po ustálené koncentrace.</td></tr>
-                <tr><td>Významná elektrolytová abnormalita (K, Mg, Ca)</td><td>EKG po korekci K, Mg, Ca.</td></tr>
-                <tr><td>Synkopa, presynkopa, palpitace aj. symptomy arytmie </td><td>EKG okamžitě.</td></tr>
-                <tr><td>Vysoké kumulativní riziko</td><td>Individuálně častější frekvence monitorace.</td></tr>
-              </tbody>
-            </table>
-            <div class="info-box">
-              Dosažení ustáleného stavu odpovídá přibližně 4–5 eliminačním poločasům léčiva. U léčiv s dlouhým poločasem nebo s aktivními metabolity (fluoxetin, parciální agonisté - aripiprazol, brexpiprazol, kariprazin) může být interval delší.
-            </div>
-          </div>
-        </details>
-
-        <details>
-          <summary>5. Interpretace výsledku EKG a další postup</summary>
+          <summary>4. Interpretace výsledku EKG a další postup</summary>
           <div class="section-content">
             <table>
               <thead><tr><th>QTc</th><th>Interpretace</th></tr></thead>
@@ -499,7 +495,7 @@
         </details>
 
         <details>
-          <summary>6. Zdroje</summary>
+          <summary>5. Zdroje</summary>
           <div class="section-content references">
             <p>Algoritmus je založen na syntéze níže uvedených zdrojů. Nejedná se o validovaný skórovací systém.</p>
             <ol>
@@ -524,20 +520,6 @@
           </div>
         </details>
       </main>
-
-      <aside class="result-card" aria-live="polite">
-        <div class="result-header">
-          <h2>Výsledek algoritmu</h2>
-        </div>
-        <div class="result-body">
-          <div id="resultBadge" class="risk-badge risk-low">🟢 EKG není nutné</div>
-          <div id="resultText" class="result-message">
-            EKG není rutinně vyžadováno. Zvažte individuálně při změně klinického stavu, navýšení dávky nebo přidání dalšího QT-prolongujícího léčiva.
-          </div>
-          <div class="summary-list" id="summaryBox"></div>
-          <button class="reset-btn" id="resetBtn">Resetovat formulář</button>
-        </div>
-      </aside>
     </div>
 
 
