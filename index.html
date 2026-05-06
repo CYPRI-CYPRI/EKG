@@ -347,7 +347,18 @@ table th:first-child {
   position: static;
   margin-bottom: 16px;
 }
-  </style>
+/* === QTc table coloring === */
+.qtc-normal { background: #e8f5e9; }
+.qtc-borderline { background: #fff8e1; }
+.qtc-prolonged { background: #fff3e0; }
+.qtc-high { background: #fde2e2; }
+
+.qtc-normal td:first-child { border-left: 6px solid #2f7d4f; }
+.qtc-borderline td:first-child { border-left: 6px solid #9a6a00; }
+.qtc-prolonged td:first-child { border-left: 6px solid #d97706; }
+.qtc-high td:first-child { border-left: 6px solid #b42318; }
+
+</style>
 </head>
 <body>
   <div class="container">
@@ -515,33 +526,6 @@ table th:first-child {
               </tbody>
             </table>
 
-            <div class="management-grid">
-              <div class="management-card red">
-                <h3>QTc ≥500 ms</h3>
-                <ul>
-                  <li>vysadit nebo výrazně snížit dávku rizikového léčiva/léčiv</li>
-                  <li>redukovat polyfarmacii a kombinace rizikových léčiv</li>
-                  <li>zkontrolovat a korigovat K, Mg, Ca</li>
-                  <li>zhodnotit lékové interakce</li>
-                  <li>zvážit switch na léčivo s nižším QTc rizikem</li>
-                  <li>zvážit kardiologickou konzultaci</li>
-                </ul>
-              </div>
-              <div class="management-card yellow">
-                <h3>QTc prodloužené, ale &lt;500 ms</h3>
-                <ul>
-                  <li>zkontrolovat K, Mg, Ca</li>
-                  <li>zvážit snížení dávky nebo změnu na méně rizikové léčivo</li>
-                  <li>zopakovat EKG po intervenci</li>
-                </ul>
-              </div>
-              <div class="management-card green">
-                <h3>QTc v normě</h3>
-                <ul>
-                  <li>pokračovat v léčbě dle klinického stavu</li>
-                  <li>další EKG podle rizika, titrace a změn medikace</li>
-                </ul>
-              </div>
             </div>
           </div>
         </details>
