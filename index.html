@@ -351,18 +351,25 @@ table th:first-child {
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Algoritmus indikace EKG u pacientů léčených psychofarmaky</h1>
-      <p class="lead">
-        Tento algoritmus slouží jako <strong>podpůrný klinický nástroj</strong> pro rozhodování, kdy indikovat EKG u pacientů léčených psychofarmaky s potenciálem prodlužovat QTc interval.
-      </p>
-      <p class="lead">
-        Je založen na syntéze dostupných EBM zdrojů (viz níže). Nejedná se o validovaný skórovací systém.
-      </p>
-      <div class="disclaimer">
-        <strong>Důležité:</strong> Tento nástroj nenahrazuje klinický úsudek, odborná doporučení, informace v SPC ani kardiologickou konzultaci. Rozhodnutí o provedení EKG musí vždy vycházet z posouzení rizika konkrétního pacienta.
-      </div>
-    </header>
+<header>
+  <h1>Algoritmus indikace EKG u pacientů léčených psychofarmaky</h1>
+
+  <p class="lead">
+    Tento algoritmus slouží jako <strong>podpůrný klinický nástroj</strong> pro rozhodování o indikaci EKG u pacientů léčených psychofarmaky s potenciálem prodlužovat QTc interval.
+  </p>
+
+  <p class="lead">
+    Je určen pro pacienty již léčené psychofarmaky, a proto vychází z předpokladu, že základní farmakologické riziko je vždy přítomno. Prahy pro indikaci EKG jsou záměrně konzervativnější než v obecné populaci a reflektují kumulativní efekt léčiv a individuálních rizikových faktorů pacienta.
+  </p>
+
+  <p class="lead">
+    Algoritmus je založen na syntéze dostupných EBM zdrojů (viz níže) a nepředstavuje validovaný skórovací systém.
+  </p>
+
+  <div class="disclaimer">
+    <strong>Důležité:</strong> Tento nástroj nenahrazuje klinický úsudek, odborná doporučení, informace v SPC ani kardiologickou konzultaci. Rozhodnutí o provedení EKG musí vždy vycházet z individuálního posouzení rizika pacienta.
+  </div>
+</header>
 
     <div class="grid">
       <main>
@@ -414,6 +421,14 @@ table th:first-child {
             <div class="info-box">
               Hraniční QTc není součástí vstupního algoritmu. QTc hodnota patří až do části interpretace výsledku EKG a následného managementu.
             </div>
+            <div class="info-box" style="background:#fff7e6; border-left:5px solid #9a6a00;">
+  <strong>Rozhodovací logika algoritmu:</strong>
+  <ul style="margin:8px 0 0 18px;">
+    <li><strong>EKG jednoznačně doporučeno:</strong> ≥1 hlavní rizikový faktor nebo vysoké riziko vyplývající z medikace</li>
+    <li><strong>EKG lze zvážit:</strong> ≥2 podpůrné rizikové faktory nebo střední riziko vyplývající z medikace</li>
+    <li><strong>EKG není nutné:</strong> nízké riziko lvyplývající z medikace a pacient je bez významných rizikových faktorů.</li>
+  </ul>
+</div>
           </div>
         </details>
 <section class="result-card result-inline" aria-live="polite">
@@ -552,6 +567,8 @@ table th:first-child {
 
 <li>Hiemke C, Bergemann N, Clement HW, Conca A, Deckert J, Domschke K, et al. Consensus guidelines for therapeutic drug monitoring in neuropsychopharmacology: update 2017. <em>Pharmacopsychiatry</em>. 2018;51(1–02):9–62. doi:10.1055/s-0043-116492.</li>
 
+<li>Shao W, Ayub S, Drutel R, Heise WC, Gerkin R. QTc prolongation associated with psychiatric medications: a retrospective cross-sectional study of adult inpatients. <em>J Clin Psychopharmacol</em>. 2019;39(1):72–77. doi:10.1097/JCP.0000000000000992.</li>
+              
 <li>Berul CI. Acquired long QT syndrome: Pathophysiology, epidemiology, and causes. In: <em>UpToDate</em> [Internet]. Waltham (MA): UpToDate Inc.; 2026 [updated 2026 Apr 6; cited 2026 May 6]. Available from: https://www.uptodate.com</li>
 
 <li>CredibleMeds®. QTdrugs List [Internet]. AZCERT, Inc.; 2026 [cited 2026 May 6]. Available from: https://www.crediblemeds.org</li>
